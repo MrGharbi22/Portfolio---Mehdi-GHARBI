@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Photography & Videography</title>
+  <meta name="description" content="Mehdi Gharbi — Photography &amp; Videography Portfolio. Film and digital photography from Tunisia.">
+  <meta name="author" content="Mehdi Gharbi">
+  <meta property="og:title" content="Mehdi Gharbi — Portfolio">
+  <meta property="og:description" content="Photography &amp; Videography — Film &amp; Digital">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="logo-3.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <!-- Page Transition -->
+  <div class="page-transition"></div>
+  <!-- Grain Overlay -->
+  <div class="grain-overlay"></div>
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+  <!-- Premium 2-Layer Cursor -->
+  <div id="cursor-ring"><span>VIEW</span></div>
+  <div id="cursor-dot"></div>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <h1>MEHDI GHARBI</h1>
+    <div class="progress-track"><div class="progress-bar"></div></div>
+    <p class="progress-text">0%</p>
+    <p class="loading-subtitle">Photography & Videography</p>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" data-dest="projects.html">
+    <div class="hero-bg">
+      <picture><source srcset="assets/hero-image.webp" type="image/webp"><img src="assets/hero-image.jpg" alt="Mehdi Gharbi - Photography Portfolio" loading="eager"></picture>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-border"></div>
+
+    <div class="hero-top-left">
+      <span data-i18n="hero.topNav.0">HOME</span>
+      <span data-i18n="hero.topNav.1">DIGITAL</span>
+      <span data-i18n="hero.topNav.2">AND FILM</span>
+      <span data-i18n="hero.topNav.3">PHOTOGRAPHY</span>
+    </div>
+
+    <div class="hero-top-right">
+      <a href="contact.html" class="contact-btn" data-i18n="nav.contact" onclick="event.stopPropagation()">CONTACT</a>
+    </div>
+
+    <div class="hero-year" data-i18n="hero.year">2 0 2 1  —  2 0 2 6</div>
+
+    <div class="hero-title">
+      <div class="line-wrap"><h1 data-i18n="hero.lines.0">MY</h1></div>
+      <div class="line-wrap"><h1 data-i18n="hero.lines.1">ARTISTIC</h1></div>
+      <div class="line-wrap"><h1 data-i18n="hero.lines.2">PLAYGROUND.</h1></div>
+    </div>
+
+    <div class="hero-arrow">→</div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close">✕</button>
+    <div class="lightbox-counter"></div>
+    <button class="lightbox-nav prev">‹</button>
+    <button class="lightbox-nav next">›</button>
+    <img class="lightbox-img" src="" alt="Lightbox image">
+  </div>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

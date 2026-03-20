@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials — Mehdi Gharbi Portfolio</title>
+  <meta name="description" content="Mehdi Gharbi — Photography &amp; Videography Portfolio. Film and digital photography from Tunisia.">
+  <meta name="author" content="Mehdi Gharbi">
+  <meta property="og:title" content="Mehdi Gharbi — Portfolio">
+  <meta property="og:description" content="Photography &amp; Videography — Film &amp; Digital">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="logo-3.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <!-- Page Transition -->
+  <div class="page-transition"></div>
+  <div class="grain-overlay"></div>
+  <div id="scroll-progress"></div>
+  <div id="cursor-ring"><span>VIEW</span></div>
+  <div id="cursor-dot"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="index.html" class="nav-underline" data-i18n="nav.home">HOME</a>
+      <a href="about.html" class="nav-underline" data-i18n="nav.about">ABOUT</a>
+      <a href="projects.html" class="nav-underline" data-i18n="nav.projects">PROJECTS</a>
+      <a href="testimonial.html" class="nav-underline active" data-i18n="nav.testimonial">TESTIMONIAL</a>
+    </div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <a href="contact.html" class="contact-btn" data-i18n="nav.contact">CONTACT</a>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="index.html" data-i18n="nav.home">HOME</a>
+    <a href="about.html" data-i18n="nav.about">ABOUT</a>
+    <a href="projects.html" data-i18n="nav.projects">PROJECTS</a>
+    <a href="testimonial.html" data-i18n="nav.testimonial">TESTIMONIAL</a>
+    <a href="contact.html" data-i18n="nav.contact">CONTACT</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang="en" style="opacity:1;border-bottom:1px solid var(--fg)">EN</button>
+      <button data-lang="fr" style="opacity:0.4">FR</button>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <div class="page-banner">
+    <img src="assets/Photos/proj/France/Banner.jpg" alt="Testimonials">
+    <div class="overlay darker"></div>
+    <div class="banner-title"><h1 data-i18n="testimonial.title">WORDS</h1></div>
+    <div class="inner-border"></div>
+  </div>
+
+  <!-- Testimonials -->
+  <div style="max-width:64rem;margin:0 auto;padding:0 2rem" id="testimonials-list"></div>
+
+  <!-- CTA -->
+  <div class="cta-section reveal">
+    <p class="cta-text" data-i18n="testimonial.cta">WANT TO BE PART OF THE STORY?</p>
+    <a href="contact.html" class="cta-button" data-i18n="testimonial.ctaButton">WORK WITH ME</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="marquee"><div class="marquee-track" id="marquee-track"></div></div>
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 data-i18n="footer.brand1">MY ARTISTIC</h3>
+          <p data-i18n="footer.brand2">PLAYGROUND.</p>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title" data-i18n="footer.navigation">NAVIGATION</span>
+          <a href="index.html" class="nav-underline">HOME</a>
+          <a href="about.html" class="nav-underline">ABOUT</a>
+          <a href="projects.html" class="nav-underline">PROJECTS</a>
+          <a href="testimonial.html" class="nav-underline">TESTIMONIAL</a>
+          <a href="contact.html" class="nav-underline">CONTACT</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title" data-i18n="footer.connect">CONNECT</span>
+          <a href="https://www.instagram.com/mehdi___gharbi/" target="_blank" rel="noopener" class="nav-underline">INSTAGRAM</a>
+          <a href="#" class="nav-underline">BEHANCE</a>
+          <a href="#" class="nav-underline">LINKEDIN</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2024 — ALL RIGHTS RESERVED</p>
+        <p data-i18n="footer.tagline">DESIGNED & BUILT WITH PASSION</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close">✕</button>
+    <div class="lightbox-counter"></div>
+    <button class="lightbox-nav prev">‹</button>
+    <button class="lightbox-nav next">›</button>
+    <img class="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function renderTestimonials() {
+      const tr = translations[currentLang];
+      document.getElementById("testimonials-list").innerHTML = tr.testimonial.items.map((item, i) => `
+        <div class="testimonial-item reveal">
+          <div class="testimonial-num">0${i+1}</div>
+          <div><p class="testimonial-quote">"${item.quote}"</p></div>
+          <div class="testimonial-author-wrap">
+            <p class="testimonial-author">${item.author}</p>
+            <p class="testimonial-role">${item.role}</p>
+          </div>
+        </div>
+      `).join("");
+      document.getElementById("marquee-track").textContent = tr.marquee.repeat(8);
+      initScrollReveal();
+    }
+    const _origSetT = setLanguage;
+    setLanguage = function(lang) { _origSetT(lang); renderTestimonials(); };
+    document.addEventListener("DOMContentLoaded", renderTestimonials);
+  </script>
+</body>
+</html>

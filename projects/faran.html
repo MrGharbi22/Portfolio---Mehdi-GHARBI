@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>faran — Portfolio</title>
+  <meta name="description" content="Mehdi Gharbi — Photography &amp; Videography Portfolio.">
+  <meta name="author" content="Mehdi Gharbi">
+  <link rel="icon" href="../logo-3.ico">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div class="page-transition"></div>
+  <div class="grain-overlay"></div>
+  <div id="scroll-progress"></div>
+  <div id="cursor-ring"><span>VIEW</span></div>
+  <div id="cursor-dot"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="../index.html" class="nav-underline" data-i18n="nav.home">HOME</a>
+      <a href="../about.html" class="nav-underline" data-i18n="nav.about">ABOUT</a>
+      <a href="../projects.html" class="nav-underline active" data-i18n="nav.projects">PROJECTS</a>
+      <a href="../testimonial.html" class="nav-underline" data-i18n="nav.testimonial">TESTIMONIAL</a>
+    </div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <a href="../contact.html" class="contact-btn" data-i18n="nav.contact">CONTACT</a>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="../index.html" data-i18n="nav.home">HOME</a>
+    <a href="../about.html" data-i18n="nav.about">ABOUT</a>
+    <a href="../projects.html" data-i18n="nav.projects">PROJECTS</a>
+    <a href="../testimonial.html" data-i18n="nav.testimonial">TESTIMONIAL</a>
+    <a href="../contact.html" data-i18n="nav.contact">CONTACT</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang="en" style="opacity:1;border-bottom:1px solid var(--fg)">EN</button>
+      <button data-lang="fr" style="opacity:0.4">FR</button>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <div style="min-height:0;padding-top:5rem">
+    <div class="page-banner">
+      <img src="../assets/Photos/proj/Faran/Photo1.jpeg" alt="faran">
+      <div class="overlay"></div>
+      <div class="banner-title">
+        <div>
+          <h1>FARAN</h1>
+          <a href="../projects.html" class="back-btn">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m0 0l7 7m-7-7l7-7" />
+            </svg>
+            BACK TO PROJECTS
+          </a>
+        </div>
+      </div>
+      <div class="inner-border"></div>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <div class="project-desc reveal">
+    <div>
+      <span class="section-label">ABOUT THE PROJECT</span>
+    </div>
+    <div>
+      <p style="font-family:var(--font-body);font-size:1rem;line-height:1.8;color:var(--muted-fg);font-style:italic">
+        "The Relationship Between man, musique and moment could be held within a shot, the key is a memory... Every
+        frame captures a fragment of time where sound meets silence, and the mundane becomes eternal..."</p>
+    </div>
+  </div>
+
+  <!-- Mosaic Grid (3x3 using repeated images) -->
+  <div class="mosaic-grid">
+    <div class="mosaic-item img-zoom"><img src="../assets/Photos/proj/Faran/Photo1.jpeg" alt="Gallery 1" loading="lazy"></div>
+    <div class="mosaic-item img-zoom"><img src="../assets/Photos/proj/Faran/Photo3.jpg" alt="Gallery 2"loading="lazy"></div>
+    <div class="mosaic-item img-zoom"><img src="../assets/Photos/proj/Faran/Photo4.jpg" alt="Gallery 3"loading="lazy"></div>
+    <div class="mosaic-item img-zoom"><img src="../assets/Photos/proj/Faran/Photo5.jpg" alt="Gallery 4"loading="lazy"></div>
+    <div class="mosaic-item img-zoom"><img src="../assets/Photos/proj/Faran/Photo6.jpg" alt="Gallery 5"loading="lazy"></div>
+    <div class="mosaic-item img-zoom"><img src="../assets/Photos/proj/Faran/Photo7.jpg" alt="Gallery 6"loading="lazy"></div>
+    <div class="mosaic-item img-zoom"><img src="../assets/Photos/proj/Faran/Photo8.jpg" alt="Gallery 7"loading="lazy"></div>
+    <div class="mosaic-item img-zoom"><img src="../assets/Photos/proj/Faran/Photo9.jpg" alt="Gallery 8"loading="lazy"></div>
+    <div class="mosaic-item img-zoom"><img src="../assets/Photos/proj/Faran/Photo10.jpg" alt="Gallery 9"loading="lazy"></div>
+  </div>
+
+  <!-- Bottom Gallery (4 cols) -->
+  <div class="bottom-gallery">
+    <div class="gallery-item img-zoom"><img src="../assets/Photos/proj/Faran/Photo10-2.jpg" alt="Detail 1" loading="lazy"></div>
+    <div class="gallery-item img-zoom"><img src="../assets/Photos/proj/Faran/Photo11.jpg" alt="Detail 2" loading="lazy"></div>
+    <div class="gallery-item img-zoom"><img src="../assets/Photos/proj/Faran/Photo12.jpg" alt="Detail 3" loading="lazy"></div>
+    <div class="gallery-item img-zoom"><img src="../assets/Photos/proj/Faran/Photo13.jpg" alt="Detail 4" loading="lazy"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="marquee">
+      <div class="marquee-track" id="marquee-track"></div>
+    </div>
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 data-i18n="footer.brand1">MY ARTISTIC</h3>
+          <p data-i18n="footer.brand2">PLAYGROUND.</p>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title" data-i18n="footer.navigation">NAVIGATION</span>
+          <a href="../index.html" class="nav-underline">HOME</a>
+          <a href="../about.html" class="nav-underline">ABOUT</a>
+          <a href="../projects.html" class="nav-underline">PROJECTS</a>
+          <a href="../testimonial.html" class="nav-underline">TESTIMONIAL</a>
+          <a href="../contact.html" class="nav-underline">CONTACT</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title" data-i18n="footer.connect">CONNECT</span>
+          <a href="https://www.instagram.com/mehdi___gharbi/" target="_blank" rel="noopener"
+            class="nav-underline">INSTAGRAM</a>
+          <a href="#" class="nav-underline">BEHANCE</a>
+          <a href="#" class="nav-underline">LINKEDIN</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2024 — ALL RIGHTS RESERVED</p>
+        <p data-i18n="footer.tagline">DESIGNED & BUILT WITH PASSION</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close">✕</button>
+    <div class="lightbox-counter"></div>
+    <button class="lightbox-nav prev">‹</button>
+    <button class="lightbox-nav next">›</button>
+    <img class="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    document.querySelectorAll(".mosaic-item, .gallery-item").forEach((el) => {
+      el.addEventListener("click", () => {
+        const allImgs = [...document.querySelectorAll(".mosaic-item img, .gallery-item img")]
+          .map(img => img.getAttribute("src"));
+        const clickedSrc = el.querySelector("img").getAttribute("src");
+        const idx = allImgs.indexOf(clickedSrc);
+        openLightbox(allImgs, idx >= 0 ? idx : 0);
+      });
+    });
+    document.getElementById("marquee-track").textContent = translations[currentLang].marquee.repeat(8);
+    const _origSetD = setLanguage;
+    setLanguage = function (lang) { _origSetD(lang); document.getElementById("marquee-track").textContent = translations[currentLang].marquee.repeat(8); };
+    document.addEventListener('DOMContentLoaded', () => {
+      initCarousel('faran-carousel', 'faran-track', 'faran-prev', 'faran-next', 'faran-dots', 'faran-counter', true);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Mehdi Gharbi Portfolio</title>
+  <meta name="description"
+    content="Mehdi Gharbi — Photography &amp; Videography Portfolio. Film and digital photography.">
+  <meta name="author" content="Mehdi Gharbi">
+  <meta property="og:title" content="Mehdi Gharbi — Portfolio">
+  <meta property="og:description" content="Photography &amp; Videography — Film &amp; Digital">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="logo-3.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Smaller tagline titles on projects page */
+    .tagline-line {
+      font-size: clamp(1.25rem, 3vw, 2.75rem) !important;
+    }
+
+    .highlight-word {
+      font-size: clamp(1.25rem, 3vw, 2.75rem) !important;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div class="page-transition"></div>
+  <div class="grain-overlay"></div>
+  <div id="scroll-progress"></div>
+  <div id="cursor-ring"><span>VIEW</span></div>
+  <div id="cursor-dot"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="index.html" class="nav-underline" data-i18n="nav.home">HOME</a>
+      <a href="about.html" class="nav-underline" data-i18n="nav.about">ABOUT</a>
+      <a href="projects.html" class="nav-underline active" data-i18n="nav.projects">PROJECTS</a>
+      <a href="testimonial.html" class="nav-underline" data-i18n="nav.testimonial">TESTIMONIAL</a>
+    </div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <a href="contact.html" class="contact-btn" data-i18n="nav.contact">CONTACT</a>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="index.html" data-i18n="nav.home">HOME</a>
+    <a href="about.html" data-i18n="nav.about">ABOUT</a>
+    <a href="projects.html" data-i18n="nav.projects">PROJECTS</a>
+    <a href="testimonial.html" data-i18n="nav.testimonial">TESTIMONIAL</a>
+    <a href="contact.html" data-i18n="nav.contact">CONTACT</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang="en" style="opacity:1;border-bottom:1px solid var(--fg)">EN</button>
+      <button data-lang="fr" style="opacity:0.4">FR</button>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div style="min-height:100vh;padding-top:5rem">
+    <!-- Main Tabs: Photo / Video -->
+    <div class="projects-tabs">
+      <button class="tab-btn active" id="tab-photo" data-i18n="projects.photography">Photography</button>
+      <button class="tab-btn" id="tab-video" data-i18n="projects.videography">Videography</button>
+    </div>
+
+    <!-- Photo Section -->
+    <div id="photo-section">
+      <div id="photo-project" style="position:relative"></div>
+    </div>
+
+    <!-- Video Section (hidden by default) -->
+    <div id="video-section" style="display:none">
+      <div class="sub-tabs" style="padding-top:1rem">
+        <button class="sub-tab active" data-vfilter="all">All</button>
+        <button class="sub-tab" data-vfilter="vertical">Vertical</button>
+        <button class="sub-tab" data-vfilter="horizontal">Horizontal</button>
+      </div>
+      <div id="video-grid" class="video-grid"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="marquee">
+      <div class="marquee-track" id="marquee-track"></div>
+    </div>
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 data-i18n="footer.brand1">MY ARTISTIC</h3>
+          <p data-i18n="footer.brand2">PLAYGROUND.</p>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title" data-i18n="footer.navigation">NAVIGATION</span>
+          <a href="index.html" class="nav-underline">HOME</a>
+          <a href="about.html" class="nav-underline">ABOUT</a>
+          <a href="projects.html" class="nav-underline">PROJECTS</a>
+          <a href="testimonial.html" class="nav-underline">TESTIMONIAL</a>
+          <a href="contact.html" class="nav-underline">CONTACT</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title" data-i18n="footer.connect">CONNECT</span>
+          <a href="https://www.instagram.com/mehdi___gharbi/" target="_blank" rel="noopener"
+            class="nav-underline">INSTAGRAM</a>
+          <a href="#" class="nav-underline">BEHANCE</a>
+          <a href="#" class="nav-underline">LINKEDIN</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2024 — ALL RIGHTS RESERVED</p>
+        <p data-i18n="footer.tagline">DESIGNED & BUILT WITH PASSION</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close">✕</button>
+    <div class="lightbox-counter"></div>
+    <button class="lightbox-nav prev">‹</button>
+    <button class="lightbox-nav next">›</button>
+    <img class="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- Video Lightbox -->
+  <div id="video-lightbox" class="video-lightbox">
+    <button class="lightbox-close">✕</button>
+    <div class="video-content"></div>
+  </div>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    /* ===== PROJECT DATA ===== */
+    const projects = [
+      {
+        id: "time-and-dirt", title: "Time & Dirt",
+        description: "An art experiment to represent a small village called 'Hawaria' in the north west of Tunisia — photos taken in an era that feels like another timeline.",
+        tagline: ["Capturing", "Visions,", "& Life"], highlightWord: "snippets...",
+        images: ["assets/Photos/proj/Time & Dirt/Photo1-1.jpg", "assets/Photos/proj/Time & Dirt/Photo2-2.jpg", "assets/Photos/proj/Time & Dirt/Photo5-3.jpeg"]
+      },
+      {
+        id: "wheat-and-mud", title: "Wheat and Mud",
+        description: "A personal modeling project — first experience with nude film photography. Raw textures, earthy tones, and the human form in dialogue with nature.",
+        tagline: ["Experimenting", "with form", "& light"], highlightWord: "Photography...",
+        images: ["assets/Photos/proj/wheat & mud/Photo1-1.jpg", "assets/Photos/proj/wheat & mud/Photo2-1.jpg", "assets/Photos/proj/wheat & mud/Photo5-1.jpg"]
+      },
+      {
+        id: "faran", title: "Faran",
+        description: "The relationship between man, music and moment held within a shot. The key is memory — every frame a fragment where sound meets silence.",
+        tagline: ["The enchantment,", "found,", "& seen"], highlightWord: "in real...",
+        images: ["assets/Photos/proj/Faran/Photo1.jpeg", "assets/Photos/proj/Faran/Photo6.jpg", "assets/Photos/proj/Faran/Photo11.jpg"]
+      },
+      {
+        id: "capital-memories", title: "Capital Memories",
+        description: "A documentary journey through the streets and souls of a capital city — fragments of urban life, architecture, and the quiet moments in between.",
+        tagline: ["Memory,", "stone,", "& light"], highlightWord: "Capital...",
+        images: ["assets/Photos/proj/Capital Memories/1.jpg", "assets/Photos/proj/Capital Memories/2.jpg", "assets/Photos/proj/Capital Memories/3.jpg"]
+      },
+      {
+        id: "dark-era", title: "Dark Era",
+        description: "A series born in low light and long exposures — exploring shadow, silence, and the emotional weight of darkness as a photographic medium.",
+        tagline: ["Shadow,", "silence,", "& grain"], highlightWord: "Dark Era...",
+        images: ["assets/Photos/proj/Dark Era/photo1.jpg", "assets/Photos/proj/Dark Era/photo2.jpg", "assets/Photos/proj/Dark Era/photo3.jpg"]
+      },
+      {
+        id: "haouaria-part-x", title: "Haouaria Part X",
+        description: "A return to Haouaria — the tenth chapter of an ongoing visual diary of a village that feels suspended between the past and the present.",
+        tagline: ["Return,", "remember,", "& stay"], highlightWord: "Part X...",
+        images: ["assets/Photos/proj/Haouaria Part X/1.jpg", "assets/Photos/proj/Haouaria Part X/2.jpg", "assets/Photos/proj/Haouaria Part X/3.jpg"]
+      }
+    ];
+
+  const videos = [
+      { id: "v2", title: "Reel Brest 2022", desc: "A cinematic reel showcasing the beauty and soul of Brest through moving images.", orient: "vertical", url: "assets/Videos/Reel Brest 2022.mp4", thumb: "assets/Videos/thumbs/reel-brest.jpg" },
+      { id: "v3", title: "Pixaura BSD", desc: "A official video for Pixaura with MMA fighter Benoit saint-Denis", orient: "vertical", url: "assets/Videos/get.mp4", thumb: "assets/Videos/thumbs/reel-brest.jpg" },
+      { id: "v4", title: "Pixaura Moto", desc: "A cinematic reel showcasing the thrill of motorcycling.", orient: "vertical", url: "assets/Videos/Moto.mp4", thumb: "assets/Videos/thumbs/reel-brest.jpg" },
+      { id: "v1", title: "ENIB Bar Créatif", desc: "A creative video project for the ENIB student bar — capturing the energy and atmosphere.", orient: "horizontal", url: "assets/Videos/Video-BARO-Enib-2023.mp4", thumb: "assets/Videos/thumbs/Enib.jpeg" }
+
+    ];
+
+    let currentProjectIndex = 0;
+    let currentVideoFilter = "all";
+
+    function renderPhotoProject() {
+      const tr = translations[currentLang];
+      const idx = currentProjectIndex;
+      const p = projects[idx];
+
+      const navArrows = projects.length > 1 ? `
+        <button class="project-nav-arrow left" onclick="changeProject(-1)" aria-label="Previous project">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button class="project-nav-arrow right" onclick="changeProject(1)" aria-label="Next project">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 5l7 7-7 7"/></svg>
+        </button>` : "";
+
+      const slidesHtml = p.images.map((img, i) => `
+        <div class="carousel-slide${i === 0 ? ' active' : ''}">
+          <img src="${img}" alt="${p.title} — ${i + 1}" loading="lazy" onclick="openLightbox(['${p.images.join("','")}'],${i})" style="cursor:zoom-in">
+          <div class="slide-overlay"></div>
+          <span class="slide-caption">${p.title} — ${i + 1} / ${p.images.length}</span>
+        </div>`).join('');
+
+      document.getElementById("photo-project").innerHTML = `
+        ${navArrows}
+        <div class="photo-split">
+          <div class="photo-tagline">
+            <div style="max-width:32rem">
+              <p class="tagline-label">photography</p>
+              ${p.tagline.map(l => `<p class="tagline-line">${l}</p>`).join("")}
+              <p class="highlight-word"><span>${p.highlightWord}</span></p>
+            </div>
+          </div>
+          <div class="project-card-wrap">
+            <div class="project-card">
+              <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+              <p class="card-counter">${String(idx + 1).padStart(2, "0")} / ${String(projects.length).padStart(2, "0")}</p>
+              <h3>" ${p.title} "</h3>
+              <div class="divider"></div>
+              <p>${p.description}</p>
+              <a href="projects/${p.id}.html" class="learn-more-btn">${tr.photo.learnMore} <span>→</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Carousel -->
+        <div class="carousel-wrap" id="proj-carousel-wrap">
+          <div class="carousel-track" id="proj-carousel-track">${slidesHtml}</div>
+          <button class="carousel-btn prev" id="proj-carousel-prev">‹</button>
+          <button class="carousel-btn next" id="proj-carousel-next">›</button>
+          <div class="carousel-counter" id="proj-carousel-counter"></div>
+          <div class="carousel-dots" id="proj-carousel-dots"></div>
+        </div>
+      `;
+
+      requestAnimationFrame(() => {
+        initCarousel('proj-carousel-wrap', 'proj-carousel-track', 'proj-carousel-prev', 'proj-carousel-next', 'proj-carousel-dots', 'proj-carousel-counter', false);
+      });
+    }
+
+    function changeProject(dir) {
+      currentProjectIndex = (currentProjectIndex + dir + projects.length) % projects.length;
+      renderPhotoProject();
+    }
+
+    function renderVideos() {
+      const filtered = currentVideoFilter === "all" ? videos : videos.filter(v => v.orient === currentVideoFilter);
+      document.getElementById("video-grid").innerHTML = filtered.map(v => `
+        <div class="video-card" onclick="openVideoLightbox('${v.orient}', '${v.url}')">
+          <div class="video-thumb ${v.orient}">
+            <video src="${v.url}" muted loop playsinline preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+            <div class="video-thumb-play">
+              <div class="play-icon"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+            </div>
+            <div class="video-hover-overlay">
+              <div class="video-hover-info">
+                <h4>${v.title}</h4>
+                <p>${v.desc}</p>
+              </div>
+            </div>
+          </div>
+          <div class="video-meta">
+            <h4>${v.title}</h4>
+            <p>${v.desc}</p>
+          </div>
+        </div>
+      `).join("");
+
+      // Play video on hover
+      document.querySelectorAll('.video-card').forEach(card => {
+        const vid = card.querySelector('video');
+        if (!vid) return;
+        card.addEventListener('mouseenter', () => vid.play());
+        card.addEventListener('mouseleave', () => { vid.pause(); vid.currentTime = 0; });
+      });
+    }
+
+    function renderMarquee() {
+      document.getElementById("marquee-track").textContent = translations[currentLang].marquee.repeat(8);
+    }
+
+    // Tab switching
+    document.getElementById("tab-photo").addEventListener("click", function () {
+      this.classList.add("active");
+      document.getElementById("tab-video").classList.remove("active");
+      document.getElementById("photo-section").style.display = "";
+      document.getElementById("video-section").style.display = "none";
+    });
+    document.getElementById("tab-video").addEventListener("click", function () {
+      this.classList.add("active");
+      document.getElementById("tab-photo").classList.remove("active");
+      document.getElementById("photo-section").style.display = "none";
+      document.getElementById("video-section").style.display = "";
+      renderVideos();
+    });
+
+    // Video filter switching
+    document.querySelectorAll("[data-vfilter]").forEach(btn => {
+      btn.addEventListener("click", function () {
+        document.querySelectorAll("[data-vfilter]").forEach(b => b.classList.remove("active"));
+        this.classList.add("active");
+        currentVideoFilter = this.dataset.vfilter;
+        renderVideos();
+      });
+    });
+
+    // Language override
+    const _origSetP = setLanguage;
+    setLanguage = function (lang) { _origSetP(lang); renderPhotoProject(); renderMarquee(); };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderPhotoProject();
+      renderVideos();
+      renderMarquee();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Mehdi Gharbi Portfolio</title>
+  <meta name="description" content="Mehdi Gharbi — Photography &amp; Videography Portfolio. Film and digital photography from Tunisia.">
+  <meta name="author" content="Mehdi Gharbi">
+  <meta property="og:title" content="Mehdi Gharbi — Portfolio">
+  <meta property="og:description" content="Photography &amp; Videography — Film &amp; Digital">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="logo-3.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <!-- Page Transition -->
+  <div class="page-transition"></div>
+  <div class="grain-overlay"></div>
+  <div id="scroll-progress"></div>
+  <div id="cursor-ring"><span>VIEW</span></div>
+  <div id="cursor-dot"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="index.html" class="nav-underline" data-i18n="nav.home">HOME</a>
+      <a href="about.html" class="nav-underline active" data-i18n="nav.about">ABOUT</a>
+      <a href="projects.html" class="nav-underline" data-i18n="nav.projects">PROJECTS</a>
+      <a href="testimonial.html" class="nav-underline" data-i18n="nav.testimonial">TESTIMONIAL</a>
+    </div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <a href="contact.html" class="contact-btn" data-i18n="nav.contact">CONTACT</a>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html" data-i18n="nav.home">HOME</a>
+    <a href="about.html" data-i18n="nav.about">ABOUT</a>
+    <a href="projects.html" data-i18n="nav.projects">PROJECTS</a>
+    <a href="testimonial.html" data-i18n="nav.testimonial">TESTIMONIAL</a>
+    <a href="contact.html" data-i18n="nav.contact">CONTACT</a>
+    <div class="mobile-lang-switcher">
+      <button data-lang="en" style="opacity:1;border-bottom:1px solid var(--fg)">EN</button>
+      <button data-lang="fr" style="opacity:0.4">FR</button>
+    </div>
+  </div>
+
+  <!-- Page Banner -->
+  <div class="page-banner tall">
+    <img src="assets/project-accent.jpg" alt="Creative vision">
+    <div class="overlay"></div>
+    <div class="banner-title"><h1 data-i18n="about.title">ABOUT</h1></div>
+    <div class="inner-border"></div>
+  </div>
+
+  <!-- Philosophy -->
+  <div class="section-grid">
+    <div class="reveal">
+      <span class="section-label" data-i18n="about.philosophyLabel">01 — PHILOSOPHY</span>
+      <h2 class="section-heading" id="philosophy-title"></h2>
+    </div>
+    <div class="reveal reveal-delay-2" style="display:flex;flex-direction:column;justify-content:center;">
+      <p class="section-text" style="margin-bottom:2rem" data-i18n="about.philosophyP1">A visual storyteller exploring the boundaries between digital and film photography. My work captures the raw essence of moments — the textures of time, the weight of memory, and the quiet poetry found in everyday life.</p>
+      <p class="section-text" data-i18n="about.philosophyP2">Based in Brest, France, I draw inspiration from the landscapes, people, and stories that surround me. Each project is an experiment in seeing / finding beauty in the overlooked, meaning in the mundane.</p>
+    </div>
+  </div>
+
+  <!-- Full Width Image -->
+  <div class="full-image reveal">
+    <img src="assets/Me.jpg" alt="Creative process">
+    <div class="image-overlay"></div>
+  </div>
+
+  <!-- Approach -->
+  <div class="section-grid">
+    <div class="reveal">
+      <span class="section-label" data-i18n="about.approachLabel">02 — APPROACH</span>
+      <h2 class="section-heading" id="approach-title"></h2>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <p class="section-text" style="margin-bottom:3rem" data-i18n="about.approachText">Whether shooting on film or digital, my approach remains the same: raw, intentional, and deeply personal. I believe every frame should breathe, carrying the atmosphere of the moment it was born in.</p>
+      <div class="stats-grid" id="stats-grid"></div>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="skills-section">
+    <span class="section-label reveal" data-i18n="about.expertiseLabel" style="margin-bottom:3rem;display:block">03 — EXPERTISE</span>
+    <div class="skills-grid" id="skills-grid"></div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section reveal">
+    <p class="cta-text" data-i18n="about.cta">LET'S CREATE SOMETHING TOGETHER</p>
+    <a href="contact.html" class="cta-button" data-i18n="about.ctaButton">GET IN TOUCH</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="marquee"><div class="marquee-track" id="marquee-track"></div></div>
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 data-i18n="footer.brand1">MY ARTISTIC</h3>
+          <p data-i18n="footer.brand2">PLAYGROUND.</p>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title" data-i18n="footer.navigation">NAVIGATION</span>
+          <a href="index.html" class="nav-underline">HOME</a>
+          <a href="about.html" class="nav-underline">ABOUT</a>
+          <a href="projects.html" class="nav-underline">PROJECTS</a>
+          <a href="testimonial.html" class="nav-underline">TESTIMONIAL</a>
+          <a href="contact.html" class="nav-underline">CONTACT</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title" data-i18n="footer.connect">CONNECT</span>
+          <a href="https://www.instagram.com/mehdi___gharbi/" target="_blank" rel="noopener" class="nav-underline">INSTAGRAM</a>
+          <a href="#" class="nav-underline">BEHANCE</a>
+          <a href="#" class="nav-underline">LINKEDIN</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">©MARG 2024 — ALL RIGHTS RESERVED</p>
+        <p data-i18n="footer.tagline">DESIGNED & BUILT WITH ♡</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close">✕</button>
+    <div class="lightbox-counter"></div>
+    <button class="lightbox-nav prev">‹</button>
+    <button class="lightbox-nav next">›</button>
+    <img class="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function renderAbout() {
+      const tr = translations[currentLang];
+      // Philosophy title
+      document.getElementById("philosophy-title").innerHTML = tr.about.philosophyTitle.map(l => l + "<br>").join("");
+      // Approach title
+      document.getElementById("approach-title").innerHTML = tr.about.approachTitle.map(l => l + "<br>").join("");
+      // Stats
+      document.getElementById("stats-grid").innerHTML = tr.about.stats.map(s =>
+        `<div><span class="stat-value">${s.value}</span><p class="stat-label">${s.label}</p></div>`
+      ).join("");
+      // Skills
+      document.getElementById("skills-grid").innerHTML = tr.about.skills.map((s, i) =>
+        `<div class="skill-item reveal"><span class="skill-name">${s.toUpperCase()}</span><span class="skill-num">0${i+1}</span></div>`
+      ).join("");
+      // Marquee
+      const m = tr.marquee;
+      document.getElementById("marquee-track").textContent = m.repeat(8);
+      initScrollReveal();
+    }
+    // Override language switch to re-render
+    const _origSet = setLanguage;
+    setLanguage = function(lang) { _origSet(lang); renderAbout(); };
+    document.addEventListener("DOMContentLoaded", renderAbout);
+  </script>
+</body>
+</html>
